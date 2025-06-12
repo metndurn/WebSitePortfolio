@@ -1,0 +1,288 @@
+@import url('https //fonts.googleapis.com/css2?family=Eco+2:wght@300;400;500;600;700;800&family=Eco:wght@200;300;400;500;600;700;800&display=swap');
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-height: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+a,
+span,
+button,
+input,
+img,
+i{
+    display: block;
+}
+button,
+input{
+    border: none;
+    background: none;
+    outline: none;
+    font: inherit;
+}
+button,
+i{
+    cursor: pointer;
+}
+input{
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: "Exo",sans-serif;
+    font-size: 10px;
+}
+body{
+    color: #243238;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* tekrar kullanılacak */
+
+.container{
+    padding-inline:16px; /* inline sagdan soldan bosluk bırakır */
+}
+.section{
+    padding-block: 125px 87px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "Exo 2",sans-serif;
+    font-style: normal;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+.grid{
+    display: grid;
+    gap: 15px; /*gap bosluk demektır*/
+}
+.img-cover{ /*cover kısmını arastırmayı unutma*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-holder{ /* aspect-ratio: var(--width)/ var(--heigth); kısmını arastırmayı unutma*/
+    aspect-ratio: var(--width)/ var(--heigth);
+    background-color: #aeaeae;
+    overflow: hidden;
+}
+.section-titler{
+    font-size: 21px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+}
+.title-wrapper{
+    margin-block-end: 20px;
+}
+.title-shape{
+    margin-block-start: 14px;
+    margin-inline: auto;
+}
+.button{
+    padding: 14px 35px;
+    background-color: #004d41;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 18px;
+    font-synthesis: 500px;
+    transition: 1s ease-in-out;
+}
+.button:hover{
+    background-color: #fff;
+}
+
+/* HEADER */
+
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #004d41;
+    padding-block: 15px;
+    width: 100%;
+    z-index: 10;
+}
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_toggle{
+    width: 30px;
+    height: 30px;
+    transition-duration: 0.5s;
+}
+.icon_menu{
+    transition-duration: 0.5s;
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    position: relative;
+    text-align: left;
+}
+.icon_menu::before{ /*alttan beyaz cizgi verdik*/
+    content: "";
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 10px;
+    background-color: #fff;
+}
+.icon_menu::after{ /*ustten beyaz cizgi verdik*/
+    content: "";
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: -10px;
+    background-color: #fff;
+}
+.nav_toggle.active .icon_menu{ /*hover mantıgı gıbı calısıyor*/
+    transition: 0.5s;
+    background: transparent;
+}
+/*animasyon mantıgı var burada arastırmayı unutma*/
+.nav_toggle.active .icon_menu::before{
+    transform: rotateZ(45deg) scaleX(1.25) translate(-5px,-5px);
+}
+.nav_toggle.active .icon_menu::after{
+    transform: rotateZ(-45deg) scaleX(1.25) translate(-7px,7px);
+}
+.logo{
+    color: #fff;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.nav_menu{
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: grid;
+    place-content: center;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s cubic-bezier(0.9,0.3,0.69,0.22);/*saniye ayarlarıdır degıstırebılırsın*/
+}
+.show-menu{
+    top: 68px;
+    visibility: visible;
+    opacity: 1;
+    transition: all .7s cubic-bezier(0.9,0.3,0.69,0.22);/*saniye ayarlarıdır degıstırebılırsın*/
+}
+.nav_list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+}
+.nav_link{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* HOME */
+.home{
+    background-image: url("../image/home_banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+.home_content{
+    padding: 150px 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.home_title{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+.typing_text{
+    width: 300px;
+    overflow: hidden;
+}
+.profession_text{
+    font-family: "Exo 2",sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    font-weight: 700;
+    position: relative;
+    -webkit-text-fiil-color:transparent;
+    -webkit-text-stroke-color:#fff;
+    -webkit-text-stroke-width:1px;
+    white-space: nowrap;
+}
+.typed-cursor{
+    display: none;
+}
+.skills_list{
+    display: flex;
+    row-gap: 15px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+.skills_list li{ /*metinlerin basında yuvarlak sımgeler verdırdık*/
+    list-style: disc;
+    color: #fff;
+    margin-inline-start: 15px;
+}
+.skills_list span{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+.social_list{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.social_link{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    border: 1px solid #2c2c2c;
+    background-color: transparent;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 50%;
+    transition: all .4s ease;
+}
+.social_link:hover{
+    background-color: #fff;
+    color: #01181d;
+}
