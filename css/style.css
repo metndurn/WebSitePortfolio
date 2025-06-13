@@ -86,7 +86,7 @@ h6{
     background-color: #aeaeae;
     overflow: hidden;
 }
-.section-titler{
+.section_title{
     font-size: 21px;
     line-height: 30px;
     color: #fff;
@@ -285,4 +285,93 @@ h6{
 .social_link:hover{
     background-color: #fff;
     color: #01181d;
+}
+
+/*hizmetler*/
+.service{
+    background-color: #01181d;
+}
+.service_list{
+    margin-block-start: 40px;
+    gap: 30px;
+}
+.service_card{
+    background-color: #04191f;
+    border: 1px solid #1b3034;
+    padding: 40px 30px 40px 40px;
+    border-radius: 12px;
+    transition: all .5s ease;
+}
+.service_card:hover{
+    background-color: #004d41;
+}
+.service_icon i{
+    color: #fff;
+    font-size: 60px;
+    padding: 15px 10px 0 0;
+}
+.service_content{
+    margin-block-start: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.service_title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+}
+.service_desc{
+    color: #fff;
+    margin-block-end: 20px;
+}
+
+/*hakkımda*/
+
+.about{
+    background-color: #01181d;
+    padding: 32 0 30px;
+}
+.about_content .bio{
+    color: #fff;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+}
+.about_content h4{
+    margin-block-start: 12px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+}
+.about_content .bio_desc{
+    margin-block: 27px 15px;
+    color: #cdcdcd;
+}
+.about_info{
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding: 3px 20px 20px;
+    background-color: #051c20;
+    border: 2px solid #273a3f;
+    border-radius: 20px;
+}
+.about_info .name,
+.about_info .span{
+    color: #fff;
+    font-style: 16px;
+    font-weight: 400;
+}
+.about_buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-block-start: 25px;
+}
+.about_buttons .button.download{
+    background-color: transparent;
+}
+.about_buttons .button.download:hover{
+    background-color: #fff;
 }
