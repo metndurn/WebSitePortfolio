@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kişisel Portfolio Web Site</title>
-    <link rel="stylesheet" href="/css/style.css">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body id="top">
     <header class="header">
@@ -85,7 +87,7 @@
             <div class="container">
                 <div class="title_wrapper">
                     <h3 class="section_title">Hizmetlerimiz</h3>
-                    <img src="/image/title-shap.png" class="title-shape" alt="">
+                    <img src="/image/title-shap.png" class="title_shape" alt="">
                 </div>
                 <ul class="service_list grid">
                     <li class="service_item">
@@ -263,13 +265,13 @@
         </section>
         <section class="section work" id="work">
             <div class="container">
-                <div class="title-wrapper">
+                <div class="title_wrapper">
                     <h3 class="section_title">Business</h3>
-                    <img src="/image/title-shap.png" alt="" class="title-shape">
+                    <img src="/image/title-shap.png" alt="" class="title_shape">
                 </div>
                 <div class="work_list grid">
                     <div class="work_item">
-                        <div class="work_banner img-holder">
+                        <div class="work_banner img_holder">
                             <img src="/image/work-1.jpg" class="img_cover" alt="">
                             <div class="work_content">
                                 <div class="work_wrapper">
@@ -283,7 +285,7 @@
                         </div>
                     </div>
                     <div class="work_item">
-                        <div class="work_banner img-holder">
+                        <div class="work_banner img_holder">
                             <img src="/image/work-2.jpg" class="img_cover" alt="">
                             <div class="work_content">
                                 <div class="work_wrapper">
@@ -297,7 +299,7 @@
                         </div>
                     </div>
                     <div class="work_item">
-                        <div class="work_banner img-holder">
+                        <div class="work_banner img_holder">
                             <img src="/image/work-3.jpg" class="img_cover" alt="">
                             <div class="work_content">
                                 <div class="work_wrapper">
@@ -311,7 +313,7 @@
                         </div>
                     </div>
                     <div class="work_item">
-                        <div class="work_banner img-holder">
+                        <div class="work_banner img_holder">
                             <img src="/image/work-4.jpg" class="img_cover" alt="">
                             <div class="work_content">
                                 <div class="work_wrapper">
@@ -325,7 +327,7 @@
                         </div>
                     </div>
                     <div class="work_item">
-                        <div class="work_banner img-holder">
+                        <div class="work_banner img_holder">
                             <img src="/image/work-5.jpg" class="img_cover" alt="">
                             <div class="work_content">
                                 <div class="work_wrapper">
@@ -339,7 +341,7 @@
                         </div>
                     </div>
                     <div class="work_item">
-                        <div class="work_banner img-holder">
+                        <div class="work_banner img_holder">
                             <img src="/image/work-6.jpg" class="img_cover" alt="">
                             <div class="work_content">
                                 <div class="work_wrapper">
@@ -381,7 +383,7 @@
             <div class="container">
                 <div class="title_wrapper">
                     <h3 class="section_title">Ekibimiz</h3>
-                    <img src="./image/title-shap.png" class="title-shape" alt="">
+                    <img src="./image/title-shap.png" class="title_shape" alt="">
                 </div>
                 <div class="team_list grid">
                     <div class="team_item">
@@ -465,12 +467,60 @@
                 </div>
             </div>
         </section>
+        <section class="section contact">
+            <div class="container">
+                <div class="title_wrapper">
+                    <h3 class="section_title">İletişime Geç</h3>
+                    <img src="./image/title-shap.png" class="title_shape" alt="">
+                </div>
+                <div class="contact_container">
+                    <div class="contact_wrapper">
+                        <input type="text" placeholder="İsim*" class="input_field">
+                        <input type="text" placeholder="Email*" class="input_field">
+                        <input type="text" placeholder="Konu*" class="input_field">
+                        <textarea placeholder="Mesajınız" class="input_field" cols="30" rows="10"></textarea>
+                        <a href="#" class="button contact_button">Gönder</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section brand">
+            <div class="container">
+                <div class="swiper brand_container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./image/brand_1.png" alt="" class="img_cover" >
+                        </div>
+                        <div class="swiper_slide">
+                            <img src="./image/brand_2.png" alt=""  class="img_cover">
+                        </div>
+                        <div class="swiper_slide">
+                            <img src="./image/brand_3.png" alt="" class="img_cover" >
+                        </div>
+                        <div class="swiper_slide">
+                            <img src="./image/brand_4.png" alt=""  class="img_cover">
+                        </div>
+                        <div class="swiper_slide">
+                            <img src="./image/brand_5.png" alt="" class="img_cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">Copyright &copy; all right reserved</p>
+        </div>
+    </footer>
 
+    <a href="#top" class="btn_top">
+        <i class="bx bx-up-arrow-alt"></i>
+    </a>
     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
